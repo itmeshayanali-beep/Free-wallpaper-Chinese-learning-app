@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Standard Colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Core App Theme Colors -->
+    <color name="primary_amber">#FFD49B4A</color>
+    <color name="primary_charcoal">#FF1E202B</color>
+    <color name="accent_terracotta">#FF8B5E3C</color>
+    <color name="accent_vermilion">#FFD34533</color>
+    <color name="accent_sage">#FF6B8A7A</color>
+    <color name="accent_indigo">#FF435385</color>
+
+    <!-- Base Canvas / Surface Colors -->
+    <color name="washi_background">#FFF9F8F5</color>
+    <color name="washi_surface">#FFFFFFFF</color>
+    <color name="washi_surface_variant">#FFF3F1EC</color>
+    <color name="washi_on_background">#FF1C1B1A</color>
+    <color name="washi_on_surface_variant">#FF5D5955</color>
+    <color name="washi_border">#FFE5E2DB</color>
+
+    <color name="dark_background">#FF121215</color>
+    <color name="dark_surface">#FF1A1C23</color>
+    <color name="dark_surface_variant">#FF262933</color>
+    <color name="dark_on_background">#FFE8E6E3</color>
+    <color name="dark_on_surface_variant">#FFA5A4A0</color>
+    <color name="dark_border">#FF323644</color>
+
+    <!-- ========================================================================= -->
+    <!-- DISTINCT THEME COLORS PER LEVEL                                           -->
+    <!-- ========================================================================= -->
+
+    <!-- Level 1: Chinese HSK 1 - Fresh Emerald Jade (Beginner Foundation) -->
+    <color name="color_hsk1_primary">#FF10B981</color>
+    <color name="color_hsk1_container">#FFD1FAE5</color>
+    <color name="color_hsk1_container_dark">#FF064E3B</color>
+    <color name="color_hsk1_text">#FF065F46</color>
+    <color name="color_hsk1_text_dark">#FF6EE7B7</color>
+    <color name="color_hsk1_border">#FFA7F3D0</color>
+
+    <!-- Level 2: Chinese HSK 2 - Vibrant Cyan / Sky Ocean (Elementary Fluency) -->
+    <color name="color_hsk2_primary">#FF06B6D4</color>
+    <color name="color_hsk2_container">#FFCFFAFE</color>
+    <color name="color_hsk2_container_dark">#FF164E63</color>
+    <color name="color_hsk2_text">#FF0E7490</color>
+    <color name="color_hsk2_text_dark">#FF67E8F9</color>
+    <color name="color_hsk2_border">#FFA5F3FC</color>
+
+    <!-- Level 3: Japanese JLPT N3 - Warm Golden Amber (Intermediate Bridge) -->
+    <color name="color_jlpt_n3_primary">#FFF59E0B</color>
+    <color name="color_jlpt_n3_container">#FFFEF3C7</color>
+    <color name="color_jlpt_n3_container_dark">#FF78350F</color>
+    <color name="color_jlpt_n3_text">#FFB45309</color>
+    <color name="color_jlpt_n3_text_dark">#FFFCD34D</color>
+    <color name="color_jlpt_n3_border">#FFFDE68A</color>
+
+    <!-- Level 4: Japanese JLPT N2 - Royal Indigo / Iris Violet (Upper Intermediate) -->
+    <color name="color_jlpt_n2_primary">#FF6366F1</color>
+    <color name="color_jlpt_n2_container">#FFE0E7FF</color>
+    <color name="color_jlpt_n2_container_dark">#FF312E81</color>
+    <color name="color_jlpt_n2_text">#FF4338CA</color>
+    <color name="color_jlpt_n2_text_dark">#FFA5B4FC</color>
+    <color name="color_jlpt_n2_border">#FFC7D2FE</color>
+
+    <!-- Level 5: Japanese JLPT N1 - Imperial Crimson Ruby (Advanced Distinction) -->
+    <color name="color_jlpt_n1_primary">#FFE11D48</color>
+    <color name="color_jlpt_n1_container">#FFFFE4E6</color>
+    <color name="color_jlpt_n1_container_dark">#FF881337</color>
+    <color name="color_jlpt_n1_text">#FFBE123C</color>
+    <color name="color_jlpt_n1_text_dark">#FFFDA4AF</color>
+    <color name="color_jlpt_n1_border">#FFFECDD3</color>
+
+    <!-- Reading Guide Container & Borders -->
+    <color name="reading_guide_container_light">#FFF5F3EF</color>
+    <color name="reading_guide_container_dark">#FF222530</color>
+    <color name="reading_guide_border_light">#FFE2DDD5</color>
+    <color name="reading_guide_border_dark">#FF353949</color>
+
+    <!-- Cultural Callout Accent Colors -->
+    <color name="callout_container_light">#FFFFFBEB</color>
+    <color name="callout_container_dark">#FF27231A</color>
+    <color name="callout_border_light">#FFFDE68A</color>
+    <color name="callout_border_dark">#FF5A481C</color>
+    <color name="callout_accent">#FFD97706</color>
+</resources>

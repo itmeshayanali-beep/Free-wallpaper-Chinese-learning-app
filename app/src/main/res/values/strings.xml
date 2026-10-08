@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Language Wallpaper</string>
+    <string name="wallpaper_description">Displays an hourly Japanese or Chinese phrase with pronunciation, meaning, and difficulty levels in a serene, battery-efficient design.</string>
+    <string name="nav_studio">Wallpaper</string>
+    <string name="nav_themes">Themes</string>
+    <string name="nav_library">Phrases</string>
+    <string name="nav_practice">Practice</string>
+    <string name="nav_mockups">Design</string>
+    <string name="action_set_wallpaper">Set as Live Wallpaper</string>
+    <string name="action_preview">Interactive Preview</string>
+    <string name="action_next_phrase">Next Hour Phrase</string>
+
+    <!-- Theme Slot Titles -->
+    <string name="slot_forest_paper">Forest Paper</string>
+    <string name="slot_custom_gallery">Photo Wallpaper</string>
+    <string name="slot_washi">Muted Washi</string>
+    <string name="slot_charcoal">OLED Charcoal</string>
+    <string name="slot_zen_mist">Zen Mist</string>
+
+    <!-- Difficulty Level Titles -->
+    <string name="level_hsk1_title">HSK 1 • Beginner Foundation</string>
+    <string name="level_hsk2_title">HSK 2 • Elementary Fluency</string>
+    <string name="level_jlpt_n3_title">JLPT N3 • Intermediate Bridge</string>
+    <string name="level_jlpt_n2_title">JLPT N2 • Upper Intermediate</string>
+    <string name="level_jlpt_n1_title">JLPT N1 • Advanced Distinction</string>
+
+    <!-- Card Layout Section Titles -->
+    <string name="section_reading_guide">Pronunciation Guide</string>
+    <string name="section_meaning">English Translation</string>
+    <string name="section_cultural_context">Cultural Context</string>
+    <string name="action_apply_wallpaper">Apply Wallpaper</string>
+</resources>

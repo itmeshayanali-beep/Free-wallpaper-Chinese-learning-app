@@ -1,0 +1,67 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null && request.auth.uid != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidUserProfile(data) {
+      return data.userId is string &&
+             data.userId == request.auth.uid &&
+             (!('displayName' in data) || data.displayName is string) &&
+             (!('email' in data) || data.email is string) &&
+             (!('totalMastered' in data) || data.totalMastered is number) &&
+             (!('currentStreak' in data) || data.currentStreak is number) &&
+             (!('preferredLanguage' in data) || (data.preferredLanguage in ['all', 'ja', 'zh'])) &&
+             (!('selectedSlot' in data) || data.selectedSlot is string);
+    }
+
+    function isValidCustomPhrase(data) {
+      return data.id is string &&
+             data.userId is string &&
+             data.userId == request.auth.uid &&
+             data.language is string &&
+             (data.language in ['ja', 'zh']) &&
+             data.nativeText is string &&
+             data.nativeText.size() > 0 &&
+             data.nativeText.size() <= 200 &&
+             data.romanization is string &&
+             data.romanization.size() <= 300 &&
+             data.english is string &&
+             data.english.size() > 0 &&
+             data.english.size() <= 500 &&
+             (!('category' in data) || data.category is string) &&
+             (!('culturalNote' in data) || data.culturalNote is string);
+    }
+
+    function isValidFavorite(data) {
+      return data.phraseId is string &&
+             data.phraseId.size() > 0 &&
+             data.userId is string &&
+             data.userId == request.auth.uid;
+    }
+
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId) && isValidUserProfile(request.resource.data);
+      allow delete: if isOwner(userId);
+
+      match /customPhrases/{phraseId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidCustomPhrase(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /favorites/{phraseId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidFavorite(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+    }
+  }
+}

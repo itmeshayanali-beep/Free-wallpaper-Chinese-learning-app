@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    =============================================================================
+    STYLED PHRASE CARD LAYOUT (item_phrase_card.xml)
+    =============================================================================
+    This layout defines the high-contrast, modern card structure for vocabulary phrases.
+    Features:
+      1. Section 1: Header Bar (Language Flag, Category Pill, Distinct Level Badge, Actions)
+      2. Section 2: Original Language Section (Large CJK Hanzi/Kanji typography)
+      3. Section 3: Pronunciation & Reading Guide Section (Tinted phonetic guide container)
+      4. Section 4: Translation Section (English meaning)
+      5. Section 5: Cultural / Usage Context Callout Section (Warm accent callout banner)
+      6. Section 6: Card Footer Action Bar (Quick apply & status indicator)
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    android:background="@drawable/bg_phrase_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 1: HEADER BAR (Category, Level Theme Badge, Audio & Favorite)     -->
+    <!-- ========================================================================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Category & Language Tag -->
+        <TextView
+            android:id="@+id/tv_phrase_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pill_rounded"
+            android:backgroundTint="@color/accent_sage"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:text="🇯🇵 Wisdom"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            tools:text="🇯🇵 Wisdom" />
+
+        <!-- Distinct Level Badge Pill (Dynamic Level Color Tinting) -->
+        <!-- Theme colors per level: HSK 1, HSK 2, JLPT N3, JLPT N2, JLPT N1 -->
+        <TextView
+            android:id="@+id/tv_phrase_level_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_pill_rounded"
+            android:backgroundTint="@color/color_jlpt_n3_container"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:text="JLPT N3"
+            android:textColor="@color/color_jlpt_n3_text"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            tools:text="JLPT N3" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Pronounce TTS Button -->
+        <ImageButton
+            android:id="@+id/btn_speak_phrase"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Listen to pronunciation"
+            android:src="@android:drawable/ic_lock_silent_mode_off"
+            android:tint="@color/primary_amber" />
+
+        <!-- Bookmark / Favorite Button -->
+        <ImageButton
+            android:id="@+id/btn_favorite_phrase"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="4dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Bookmark phrase"
+            android:src="@android:drawable/btn_star"
+            android:tint="@color/primary_amber" />
+    </LinearLayout>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: ORIGINAL LANGUAGE SECTION (Native CJK Kanji / Hanzi Glyphs)    -->
+    <!-- Large font size, optimal line-spacing for intricate strokes                -->
+    <!-- ========================================================================= -->
+    <TextView
+        android:id="@+id/tv_native_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/dark_surface"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.04"
+        android:lineSpacingExtra="4dp"
+        tools:text="一期一会" />
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: PRONUNCIATION / READING GUIDE SECTION                          -->
+    <!-- Dedicated tinted container with phonetic Romaji / Pinyin guide             -->
+    <!-- ========================================================================= -->
+    <LinearLayout
+        android:id="@+id/layout_reading_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/reading_guide_container_light"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/tv_romanization_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_jlpt_n3_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            tools:text="Ichigo ichie" />
+    </LinearLayout>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: TRANSLATION & MEANING SECTION                                  -->
+    <!-- Clear English translation and nuanced context                              -->
+    <!-- ========================================================================= -->
+    <TextView
+        android:id="@+id/tv_english_translation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/washi_on_background"
+        android:textSize="15sp"
+        android:lineSpacingExtra="2dp"
+        tools:text="Once-in-a-lifetime encounter; treasuring each moment as unrepeatable." />
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 5: CULTURAL CONTEXT CALLOUT SECTION                               -->
+    <!-- Warm callout container with lightbulb accent for usage guidance            -->
+    <!-- ========================================================================= -->
+    <LinearLayout
+        android:id="@+id/layout_cultural_callout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@color/callout_container_light"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/tv_cultural_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/callout_accent"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="💡 Rooted in tea ceremony philosophy, reminding us that each meeting is uniquely precious." />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/washi_border" />
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 6: QUICK ACTION FOOTER                                            -->
+    <!-- ========================================================================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_times_shown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/washi_on_surface_variant"
+            android:textSize="11sp"
+            android:text="Hourly Rotation Active" />
+
+        <Button
+            android:id="@+id/btn_apply_wallpaper"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="Apply Wallpaper"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

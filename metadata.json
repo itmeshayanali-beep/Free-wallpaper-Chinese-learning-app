@@ -1,0 +1,6 @@
+{
+  "name": "Language Wallpaper",
+  "description": "Hourly language learning wallpaper for Japanese and Chinese with live typography rendering, aesthetic themes, and companion study features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
